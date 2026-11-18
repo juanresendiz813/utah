@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16",
+  "generated_at": "2026-11-18",
   "generator": "scripts/generate-site-data.py",
   "groups": [
     {
@@ -162,6 +162,7 @@
         "ethtool",
         "exfatprogs",
         "f2fs-tools",
+        "fcitx5-gtk",
         "ffmpegthumbnailer",
         "file",
         "foo2zjs",
@@ -384,7 +385,7 @@
     }
   ],
   "totals": {
-    "installed": 327,
+    "installed": 328,
     "unavailable": 6
   },
   "unavailable": [

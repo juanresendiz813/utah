@@ -166,7 +166,7 @@ elfutils = { status = "untriaged", area = "dev-toolchain" }
 erofs-utils = { status = "untriaged", area = "files-devices" }
 espeak-ng = { status = "untriaged", area = "accessibility-input" }
 fastfetch = { status = "untriaged", area = "cli-tools" }
-fcitx5-gtk = { status = "untriaged", area = "accessibility-input" }
+fcitx5-gtk = { status = "planned", area = "accessibility-input", issue = "#1256", reason = "In packages/utah.toml [parity]; drops out at the next re-measure" }
 fftw = { status = "untriaged", area = "media" }
 freerdp = { status = "untriaged", area = "networking" }
 gcab = { status = "untriaged", area = "dev-toolchain" }
@@ -231,7 +231,7 @@ libpinyin = { status = "untriaged", area = "accessibility-input" }
 libplist = { status = "untriaged", area = "files-devices" }
 libpng = { status = "untriaged", area = "media" }
 libpsl = { status = "untriaged", area = "networking" }
-librime = { status = "untriaged", area = "accessibility-input" }
+librime = { status = "planned", area = "accessibility-input", issue = "#1256", reason = "ibus-rime needs brise, opencc, glog and leveldb, which no enabled repository publishes" }
 librsvg = { status = "untriaged", area = "media" }
 libseccomp = { status = "untriaged", area = "auth-security" }
 libselinux = { status = "untriaged", area = "auth-security" }

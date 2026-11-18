@@ -67,8 +67,13 @@ follows the same rule when importing recipes. Dakota parity installs `wget2`
 and `wget2-wget` (the `wget` link); the desktop file contract checks both commands.
 
 Utah requests available Dakota input engines and language libraries in `[parity]` (#1256).
-Keep the base manifest's Mozc and Unikey; ibus-anthy and ibus-typing-booster await
-`kasumi-unicode` and `cldr-emoji-annotation`, which neither the factory nor Hummingbird publishes.
+Keep the base manifest's Mozc and Unikey. `fcitx5-gtk` (the GTK module for Fcitx 5) is in.
+Three engines the factory now builds still miss a dependency in both enabled repositories:
+ibus-anthy needs `kasumi-unicode`, ibus-typing-booster needs `cldr-emoji-annotation`, and
+ibus-rime needs `brise` plus librime's `opencc`, `glog` and `leveldb` libraries. Without a
+container engine, check a closure by walking `requires` across the pinned factory repodata
+(`repository_metadata()` in `scripts/check-repo-availability.py`) and Hummingbird's
+`primary.xml.gz`; `just check-repos` stays the gate.
 
 ## Wi-Fi documentation currency
 
@@ -362,7 +367,7 @@ describe the same image as its `surface.tsv`; after a refresh,
 [remove resolved triage entries](package-contract/references/factory-consumption.md#closing-baseline-gaps).
 
 Current counts, per the README "Parity with Dakota" section: 61 base manifest
-packages installed, 266 Utah additions (GNOME 51, base-image parity, device
+packages installed, 267 Utah additions (GNOME 51, base-image parity, device
 firmware, desktop services), 6 genuinely unavailable. `scripts/check-doc-counts.py` (part of
 `just check`) recomputes these from the manifests and fails if either
 document drifts from `site/data/packages.json`.
